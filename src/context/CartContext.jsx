@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
         name: "Radiance Peptide Elixir",
         price: 2650,
         originalPrice: 2950,
-        image: "/images/prod_serum.jpg",
+        image: "./images/prod_serum.jpg",
         category: "Serums",
         subtitle: "Multi-Peptide & Hyaluronic Concentrate",
         quantity: 1,

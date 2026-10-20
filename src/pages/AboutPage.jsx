@@ -64,7 +64,7 @@ export const AboutPage = () => {
             {/* Founders Image */}
             <div className="founders-media">
               <img 
-                src="/images/campaign_skinday.jpg" 
+                src="./images/campaign_skinday.jpg" 
                 alt="Amruta and Janhavi, Founders of DUELLE"
               />
             </div>

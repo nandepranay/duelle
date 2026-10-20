@@ -26,12 +26,12 @@ export const HomePage = () => {
 
   // Instagram Gallery data
   const communityPosts = [
-    { id: 1, image: "/images/hero_campaign.jpg", caption: "Luminous morning ritual with Radiance Peptide Elixir." },
-    { id: 2, image: "/images/cat_cleansers.jpg", caption: "Velvet Rose Cleanser melted into skin." },
-    { id: 3, image: "/images/prod_cream.jpg", caption: "Cloud-whipped barrier protection." },
-    { id: 4, image: "/images/cat_lipcare.jpg", caption: "High-shine peptide lip glaze." },
-    { id: 5, image: "/images/campaign_skinday.jpg", caption: "Glowing together. Make every day a skin day." },
-    { id: 6, image: "/images/prod_sunscreen.jpg", caption: "Invisible daily broad spectrum SPF 50+." }
+    { id: 1, image: "./images/hero_campaign.jpg", caption: "Luminous morning ritual with Radiance Peptide Elixir." },
+    { id: 2, image: "./images/cat_cleansers.jpg", caption: "Velvet Rose Cleanser melted into skin." },
+    { id: 3, image: "./images/prod_cream.jpg", caption: "Cloud-whipped barrier protection." },
+    { id: 4, image: "./images/cat_lipcare.jpg", caption: "High-shine peptide lip glaze." },
+    { id: 5, image: "./images/campaign_skinday.jpg", caption: "Glowing together. Make every day a skin day." },
+    { id: 6, image: "./images/prod_sunscreen.jpg", caption: "Invisible daily broad spectrum SPF 50+." }
   ];
 
   const handleNewsletterSubmit = (e) => {
@@ -110,7 +110,7 @@ export const HomePage = () => {
             <div className="hero-image-container">
               <div className="hero-image-frame">
                 <img 
-                  src="/images/hero_campaign.jpg" 
+                  src="./images/hero_campaign.jpg" 
                   alt="DUELLE Skincare Campaign - Radiant dewy glass skin"
                 />
               </div>
@@ -210,7 +210,7 @@ export const HomePage = () => {
             
             <div className="campaign-media">
               <img 
-                src="/images/campaign_skinday.jpg" 
+                src="./images/campaign_skinday.jpg" 
                 alt="Make Every Day a Skin Day - DUELLE campaign"
                 loading="lazy" 
               />
