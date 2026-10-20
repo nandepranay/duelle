@@ -1,0 +1,299 @@
+/* ==========================================================================
+   DUELLE LUXURY BEAUTY DESIGN SYSTEM
+   "Your Skin. Your Story."
+   Brought to you by Amruta and Janhavi.
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --color-bg-primary: #FCFAF8;
+  --color-bg-secondary: #F6F1EA;
+  --color-bg-card: #FFFFFF;
+  --color-bg-blush: #FBF1ED;
+  --color-bg-blush-soft: #F9ECE6;
+  --color-bg-blush-accent: #F2DCD3;
+  --color-bg-champagne: #F5EFEB;
+  --color-bg-dark: #191413;
+  --color-bg-dark-card: #251D1B;
+
+  --color-text-primary: #1F1816;
+  --color-text-secondary: #584A46;
+  --color-text-muted: #8E7C77;
+  --color-text-light: #FBF7F5;
+  --color-text-blush: #B8735C;
+  
+  --color-gold: #B88939;
+  --color-gold-light: #DFC48A;
+  --color-gold-muted: #9E7A3E;
+
+  --color-border-light: rgba(31, 24, 22, 0.08);
+  --color-border-subtle: rgba(210, 152, 134, 0.25);
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 2px 8px rgba(31, 24, 22, 0.04);
+  --shadow-md: 0 8px 24px rgba(31, 24, 22, 0.07);
+  --shadow-lg: 0 16px 40px rgba(31, 24, 22, 0.1);
+  --shadow-hover: 0 20px 48px rgba(184, 115, 92, 0.14);
+  --glass-bg: rgba(252, 250, 248, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.6);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-luxury: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Spacing */
+  --container-max: 1320px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Typography Utility Classes */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-text-blush);
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Luxury Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.95rem 2rem;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+  border: 1px solid var(--color-text-primary);
+}
+
+.btn-primary:hover {
+  background-color: #382A26;
+  border-color: #382A26;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(31, 24, 22, 0.18);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 24, 22, 0.12);
+}
+
+.btn-blush {
+  background-color: var(--color-bg-blush-accent);
+  color: var(--color-text-primary);
+  border: 1px solid transparent;
+}
+
+.btn-blush:hover {
+  background-color: #EBCBC0;
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background-color: #FFFFFF;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.btn-light:hover {
+  background-color: var(--color-bg-blush);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.btn-sm {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Badges */
+.badge-pill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+}
+
+.badge-blush {
+  background-color: var(--color-bg-blush-soft);
+  color: var(--color-text-blush);
+  border: 1px solid rgba(210, 152, 134, 0.3);
+}
+
+.badge-gold {
+  background-color: #FBF4E6;
+  color: var(--color-gold-muted);
+  border: 1px solid rgba(184, 137, 57, 0.25);
+}
+
+.badge-dark {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9C9C2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BFA9A0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Shimmer for luxury images */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-luxury);
+}
